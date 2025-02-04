@@ -1,3 +1,9 @@
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
+
+(: map (-> (-> $x $y) list list))
+
 (= (map $f ()) ())
 (= (map $f (:: $head $tail)) 
 	(:: ($f $head) (map $f $tail))

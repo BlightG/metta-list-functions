@@ -1,3 +1,8 @@
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
+
+(: is-member (-> Number list list))
 (= (is-member $x ()) False)
 (= (is-member $x (:: $head $tail))
 	(if (== $x $head)
