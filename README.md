@@ -28,3 +28,9 @@ To run the files just simply
 ``sh
 metta <filename>.metta
 ``
+
+# Graph rewriting
+
+The graph rewriting file shows how metta can make structral changes to a stored knowledge graph by creating new relationships between family members and by adding new connenctions between families
+for further understanding about grpah rewriting
+[click this link](https://docs.google.com/presentation/d/1qGXM96CbapDBFuHDXsNFTh5d1d681S4Ls4cfizpStV4/edit#slide=id.g32cc5e6cc18_0_52)
