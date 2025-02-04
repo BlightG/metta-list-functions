@@ -1,8 +1,14 @@
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
+
+(: max-value (-> list Number))
 (= (max-value ()) ())
 (= (max-value (:: $head $tail)) 
 	(is-max $head $tail)
 )
 
+(: is-max (-> Number list Number))
 (= (is-max $x ()) $x)
 (= (is-max $x (:: $head $tail))
 	(if (> $x $head)

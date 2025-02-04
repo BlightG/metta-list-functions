@@ -1,8 +1,9 @@
- ; takes a function from type t to bool and a list then return a list
-(: filter (-> (-> $t Bool) (List $t) (List $t)))
- ;basecase
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
+
+(: filter (-> (-> $t Bool) list list))
 (= (filter $f ()) ())
- ; now we define the recursive case
 (= (filter $f (:: $h $t))
     (if ($f $h)
         (:: $h (filter $f $t))
@@ -12,5 +13,4 @@
 (= (greateThan0 ()) ())
 (= (greateThan0 $x ) (> $x 0))
 
-(greateThan0 -2)
 !(filter greateThan0 (:: 1 (:: -2 (:: 3 ()))))

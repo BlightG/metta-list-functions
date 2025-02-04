@@ -1,3 +1,8 @@
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
+
+(: remove (-> Number list list))
 (= (remove $x ()) ())
 (= (remove $x (:: $head $tail)) 
 	(if (== $x $head)

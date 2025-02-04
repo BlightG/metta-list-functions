@@ -1,9 +1,14 @@
+(: list Type)
+(: () list)
+(: :: (-> Number list list))
 
+(: min-value (-> list list))
 (= (min-value ()) ())
 (= (min-value (:: $head $tail)) 
 	(is-min $head $tail)
 )
 
+(: is-min (-> Number list Number))
 (= (is-min $x ()) $x)
 (= (is-min $x (:: $head $tail))
 	(if (< $x $head)
